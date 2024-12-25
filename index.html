@@ -1,0 +1,166 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link di lindungi Internasional</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9; /* Warna latar belakang terang */
+            color: #333; /* Warna teks */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #007bff; /* Warna biru untuk teks judul */
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555; /* Warna abu-abu untuk teks paragraf */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 150px; /* Ukuran gambar lebih kecil */
+            height: 100px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            cursor: pointer;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+            border-color: #007bff; /* Warna biru saat hover */
+        }
+
+        .checkbox-container {
+            margin-top: 30px;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .checkbox-container label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        #proceedBtn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #proceedBtn:disabled {
+            background-color: #ccc;
+        }
+
+        #proceedBtn:hover {
+            background-color: #0056b3;
+        }
+
+        .loading {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Perhatian: Hak Cipta link resmi lidungin jasa keuangan </h2>
+        <p>Semua materi yang ditampilkan di situs ini dilindungi oleh hak cipta internasional.ojk kominfo Anda harus menyetujui ketentuan ini untuk melanjutkan.</p>
+
+        <!-- Gambar yang dilindungi hak cipta -->
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwnhUIY9ycd6Xib2xHZKngQ-GIlT_1KfNjAw&usqp=CAU" alt="Gambar Hak Cipta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA4vCv4tmMDT1tTVvDrd3Cqt8AKbEzEcEi_Q&usqp=CAU" alt="Gambar Hak Cipta Lain">
+        </div>
+
+        <!-- Kotak Centang Persetujuan -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="agreeCheckbox"> <label for="agreeCheckbox">Saya setuju dengan ketentuan hak cipta ini.</label>
+        </div>
+
+        <!-- Tombol untuk melanjutkan -->
+        <button id="proceedBtn" disabled onclick="startLoading()">Lanjutkan</button>
+
+        <!-- Indikator Loading -->
+        <div id="loadingMessage" class="loading">Sedang memuat, harap tunggu...</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024(dana id) Indonesia🇮🇩. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menyalakan tombol 'Lanjutkan' setelah kotak centang disetujui
+        document.getElementById('agreeCheckbox').addEventListener('change', function() {
+            document.getElementById('proceedBtn').disabled = !this.checked;
+        });
+
+        // Fungsi untuk menampilkan proses loading
+        function startLoading() {
+            // Menyembunyikan tombol dan menampilkan loading
+            document.getElementById('proceedBtn').style.display = 'none';
+            document.getElementById('loadingMessage').style.display = 'block';
+
+            // Simulasi proses loading
+            setTimeout(function() {
+                // Setelah loading selesai, pindah halaman
+                window.location.href = "halaman-baru.html"; // Ganti dengan URL halaman tujuan
+            }, 3000); // Loading berlangsung selama 3 detik
+        }
+    </script>
+
+</body>
+</html>
